@@ -15,8 +15,6 @@
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
-      <uses-permission android:name="android.permission.CAMERA" android:required="false" />
-      <uses-feature android:name="android.hardware.camera" android:required="false" />
       <uses-feature android:name="android.hardware.camera.front" android:required="false" />
     </config-file>
     <source-file src="src/android/QRScanner.java" target-dir="src/com/bitpay/cordova/qrscanner"/>
@@ -30,9 +28,6 @@
     </config-file>
     <dependency id="cordova-plugin-add-swift-support" spec="~1.7.2" />
     <source-file src="src/ios/QRScanner.swift"/>
-    <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
-      <string>The camera is used to scan QR codes.</string>
-    </config-file>
   </platform>
   <platform name="browser">
     <config-file target="config.xml" parent="/*">
